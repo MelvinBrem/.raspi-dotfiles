@@ -4,36 +4,26 @@
 
 <b>Update all packages</b>
 
-```
-# Get available updates
-sudo apt update
-# Install updates and clean up afterwards
-sudo apt full-upgrade
+```sh
+sudo apt update && sudo apt full-upgrade
 ```
 
-<b>Install Zsh and the Git cli</b>
+<b>Install Zsh, Stow and the Git cli</b>
 
-```
-sudo apt install zsh -y
-sudo apt install git -y
+```sh
+sudo apt install zsh git -y
 ```
 
 <b>Clone this repo to the user (admin) root</b>
 
-```
+```sh
 cd ~/
-git clone git@github.com:MelvinBrem/.raspi-dotfiles.git
+git clone https://github.com/MelvinBrem/.raspi-dotfiles.git
 cd .raspi-dotfiles/
 ```
 
-<b>Create necessary symlinks</b>
+<b>Run setup</b>
 
-```
-make
-```
-
-<b>And run the setup</b>
-
-```
-make setup
+```sh
+source ~/.raspi-dotfiles/zsh/.zsh/.setup
 ```

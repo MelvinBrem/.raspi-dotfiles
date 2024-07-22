@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Allow copy & paste when ClientCutText is set to true on the client side
 autocutsel -fork
