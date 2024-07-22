@@ -6,4 +6,4 @@ setopt PROMPT_SUBST
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-export PS1="%F{green}%~%F{blue} >> %F{green}"
+export PS1="%F{green}[%F{cyan}%n%F{green}]%F{green} %~%F{cyan} >> %F{green}"

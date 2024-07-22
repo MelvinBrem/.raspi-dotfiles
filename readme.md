@@ -8,22 +8,20 @@
 sudo apt update && sudo apt full-upgrade
 ```
 
-<b>Install Zsh, Stow and the Git cli</b>
+<b>Install the Git cli and Stow</b>
 
 ```sh
-sudo apt install zsh git -y
+sudo apt install git stow -y
 ```
 
 <b>Clone this repo to the user (admin) root</b>
 
 ```sh
-cd ~/
-git clone https://github.com/MelvinBrem/.raspi-dotfiles.git
-cd .raspi-dotfiles/
+cd ~/ && git clone https://github.com/MelvinBrem/.raspi-dotfiles.git
 ```
 
 <b>Run setup</b>
 
 ```sh
-source ~/.raspi-dotfiles/zsh/.zsh/.setup
+cd ~/.raspi-dotfiles/ && make && make setup
 ```
