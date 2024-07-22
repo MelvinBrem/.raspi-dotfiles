@@ -1,0 +1,10 @@
+# === Global ===
+
+alias ls="ls -a"
+alias \.\.="cd .."
+
+alias code="code ."
+alias open="open ."
+alias nano="sudo nano"
+
+alias re="clear; exec zsh -l"
