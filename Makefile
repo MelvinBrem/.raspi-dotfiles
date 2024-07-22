@@ -11,11 +11,16 @@ delete:
 # === Setup ===
 
 setup:
+	@sudo dphys-swapfile swapoff
+	@sudo sed -i "s/^CONF_SWAPSIZE=.*/CONF_SWAPSIZE=1024/" /etc/dphys-swapfile
+	@sudo dphys-swapfile setup
+	@sudo dphys-swapfile swapon
+
 	@sudo raspi-config nonint do_vnc 0
 	@sudo raspi-config nonint do_ssh 0
 	@sudo apt install zsh firefox-esr realvnc-vnc-server -y
 	@chsh -s /usr/bin/zsh
-	@sudo update-alternatives --config x-www-browser /usr/bin/firefox-esr
+	@sudo update-alternatives --set x-www-browser /usr/bin/firefox-esr
 	
 	@sed -i "s/^sNet\/ThemeName=.*/sNet\/ThemeName=PiXnoir/" ~/.config/lxsession/LXDE-pi/desktop.conf
 	@sed -i "s/^desktop_bg=.*/desktop_bg=#222222/" ~/.config/pcmanfm/LXDE-pi/desktop-items-0.conf
@@ -25,4 +30,4 @@ setup:
 	@sed -i "s/^wallpaper_mode=.*/wallpaper_mode=color/" ~/.config/pcmanfm/LXDE-pi/desktop-items-0.conf
 	@pcmanfm --reconfigure
 	
-	@clear; echo "=== Done ==="
+	@reboot

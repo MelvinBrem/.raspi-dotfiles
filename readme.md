@@ -1,5 +1,9 @@
 ## Dotfiles for office raspies
 
+### Requirements
+- Raspberry Pi 3B (other versions not tested)
+- 1Gb of free memory for swapfile
+
 ### Raspi setup and installation
 
 <b>Update all packages</b>
