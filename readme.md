@@ -1,11 +1,11 @@
-## Dotfiles for office raspies
+# Dotfiles for office raspies
 
-### Requirements
+## Requirements
 
 - Raspberry Pi 3B (other versions not tested)
 - 1Gb of free storage for swapfile allocation
 
-### Raspi setup and installation
+## Raspi setup and installation
 
 <b>Update all packages</b>
 
@@ -33,4 +33,26 @@ cd ~/ && git clone https://github.com/MelvinBrem/.raspi-dotfiles.git
 
 ```sh
 cd ~/.raspi-dotfiles/ && make && make setup
+```
+
+<hr>
+
+## Connecting to a Raspi
+
+RealVNC Viewer is the easiest way of interfacing with the Raspi from the comfort of your own laptop. VNC has been enabled and the necessary server packages have been installed on setup, so everything should be good to go.
+
+All you have to do is:<br>
+
+<b>Install RealVNC Viewer on your own device<b>
+
+```sh
+sudo brew install vnc-viewer
+# Assuming you're using a Mac, other methods available
+```
+
+<b>Get the Raspi's network IP to add it to your connections</b>
+
+```sh
+hostname -I
+# Keep in mind that you have to be connected to the same network :)
 ```
